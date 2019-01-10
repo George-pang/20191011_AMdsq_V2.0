@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>澳门大屏</title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/echarts.min.js"></script>
+    <!-- 引入echarts vintage主题 -->
+    <script src="lib/vintage.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <link rel="stylesheet" href="lib/normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main" style="background-image: url(images/bgImg.png)">
+        <div class="header_title" style="background-image:url(images/headerBg.png)">
+            <h3 class="title">澳门消防局控制中心</h3>
+        </div>
+        <div class="content">
+            <!-- 天气部分 -->
+            <div class="weather_container">
+                <div class="weather" style="background-image: url(images/leftBg.png)">
+                    <!-- 实时天气 -->
+                    <div class="column_title">
+                        <img src="images/arrow.png" alt="" class="arrow">
+                        <h4 class="title">天气情况</h4>
+                    </div>
+                    <div class="weather_summary">
+                        <div class="icon sunny">
+                            <i class="sun">
+                                <img src="images/sun.png" alt="">
+                            </i>
+                        </div>
+
+                        <p class="degrees"><span id="temperature">- 1</span>℃</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 统计部分 -->
+            <div class="statistics_container">
+                <div class="statistics_phone">
+                    <div class="phoneChart" style="background-image: url(images/rightBg.png)">
+
+                    </div>
+                </div>
+                <div class="statistics_report">
+                    <div class="reportChart" style="background-image: url(images/rightBg.png)">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+
+</html>
