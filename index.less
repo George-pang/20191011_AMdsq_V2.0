@@ -1,3 +1,4 @@
+@fColor:#02d9fa;
 // 引入iconfont字体文件
 @font-face {
     font-family: 'iconfont';
@@ -34,7 +35,8 @@ strong,h3,h4{
     position: relative;
     // width: 1920px;
     // height: 1080px;
-    min-width: 1280px;
+    min-width: 1920px;
+    // min-height: 1080px;
     height: 100%;
     padding: 90px 0 40px;
     background-position: center center;
@@ -51,7 +53,7 @@ strong,h3,h4{
         background-size: cover;
         // background-size: 100% 100%;
         background-repeat: no-repeat;
-        // z-index: 999;
+        z-index: 999;
         .title{
             margin-top: 16px;
             font-family: MicrosoftYaHei-Bold;
@@ -107,26 +109,39 @@ strong,h3,h4{
                         color: #02d9fa;
                     }
                 }
-                .weather_summary{
-                    position: relative;
-                    margin-top: 20%;
+                .instantTime{
+                    position: absolute;
+                    right: 30px;
+                    // top: 90px;
+                    top: 9.47%;
+                    height: 20px;
+                    font-family: MicrosoftYaHei;
+                    font-size: 20px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    line-height: 20px;
+                    letter-spacing: 0px;
+                }
+                .weather_summary {
+                    // margin-top: 178px;
+                    margin-top: 16.48vh;
+                    position: relative; 
                     // height: 330px;
-                    height: 34.74%;
+                    // height: 34.74%;
                     text-align: center;
-                    .icon{
+                    .icon {
                         position: relative;
-                        // height: 176px;
-                        height: 53.33%;
+                        // height: 200px; 
+                        height: 18.52vh;
                     }
-                    .sunny{
-                        .sun{
+                    .sunny {
+                        .sun {
                             display: block;
                             position: absolute;
                             left: 50%;
                             top: 0;
+                            transform: translateX(-50%); 
                             height: 100%;
-                            transform: translateX(-50%);
-                            // color: #d89864;
                             color: #ffb948;
                             background-position: center center;
                             background-size: 100% 100%;
@@ -139,13 +154,67 @@ strong,h3,h4{
                             animation-iteration-count: infinite;
                             -webkit-animation-timing-function: linear;
                             animation-timing-function: linear;
-                            >img{
+                            >img {
                                 height: 100%;
                                 width: auto;
                             }
                         }
                     }
+                    .degrees {
+                        // margin-top: 28px;
+                        margin-top: 2.59vh; 
+                        font-size: 48px;
+                        height: 48px;
+                        line-height: 48px;
+                        color: #02d9fa;
+                    }
+                    .weather_status {
+                        // margin-top: 30px;
+                        margin-top: 2.78vh;
+                        font-size: 36px;
+                        height: 36px;
+                        line-height: 36px;
+                        color: #708acc;
+                    }
                 }
+                .weather_detail {
+                    position: absolute;
+                    bottom: 7.41vh;
+                    left: 0;
+                    width: 100%;
+                    padding: 0 16px;
+                    .weather_detail_live{
+                        width: 50%;
+                        .item_list{
+                            width: 100%;
+                            padding-right: 5px;
+                            .item{
+                                &:nth-of-type(1),&:nth-of-type(3){
+                                    width: 50%;
+                                    padding-right: 5px;
+                                    .item_name{
+                                        width: 50%;
+                                    }
+                                }
+                                &:nth-of-type(2),&:nth-of-type(4){
+                                    width: 50%;
+                                    padding-left: 5px;
+                                }
+                                &::nth-of-type(5){
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .weather_detail_bad{
+                        width: 50%;
+                        .item_list{
+                            width: 100%;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+
             }
         }
         .statistics_container{
